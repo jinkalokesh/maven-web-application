@@ -1,0 +1,31 @@
+node
+{
+def mavenHome = tool name: "3.6.3" 
+stage ('checkoutgit')
+ {
+  git credentialsId: 'lokesh', url: 'https://github.com/jinkalokesh/maven-web-application.git'
+ }
+stage ('build')
+ { 
+  sh "${mavenHome}/bin/mvn clean package"
+ }
+ stage('sonarreport')
+ {
+   sh "${mavenHome}/bin/mvn sonar:sonar"
+ }  
+ stage ('tonexus')
+ { 
+  sh "${mavenHome}/bin/mvn deploy"
+ }
+ stage ('tomcat')
+ {
+ sshagent(['64807cbd-e0da-41fe-bee2-f079707ce0bd'])
+ {
+ sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.25.144.159:/opt/apache-tomcat-9.0.56/webapps/"
+ } 
+ } 
+ stage('mail')
+ {    
+  mail bcc: '', body: 'sucess', cc: 'success', from: '', replyTo: '', subject: 'succes', to: 'jinkalokesh501@gmail.com'
+ }   
+ } 
