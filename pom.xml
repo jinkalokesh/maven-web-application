@@ -16,7 +16,11 @@
 		<url>http://mithuntechnologies.com/</url>
 	</organization>
 <repositories>
-	<url>http://18.212.55.5:8081/repository/group/</url>
+	<repository>
+		<id>nexus</id>
+		<url>http://18.212.55.5:8081/repository/group/</url>
+	</repository>
+	</repositories>
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<spring.version>5.1.2.RELEASE</spring.version>
