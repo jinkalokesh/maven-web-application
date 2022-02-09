@@ -30,7 +30,7 @@
 <repositories>
 	<repository>
 		<id>nexus</id>
-		<url>http://18.212.55.5:8081/repository/group/</url>
+		<url>http://18.234.102.19:8081/repository/Remote/</url>
 	</repository>
 	</repositories>
 	<dependencies>
