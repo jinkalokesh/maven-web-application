@@ -18,7 +18,7 @@
 <repositories>
 	<repository>
 		<id>nexus</id>
-		<url>http://18.212.55.5:8081/repository/gp2/</url>
+		<url>http://18.212.55.5:8081/repository/gpfinal/</url>
 	</repository>
 	</repositories>
 	<properties>
@@ -34,14 +34,14 @@
 	</properties>
 
 	<dependencies>
-		 <!--
+		
 
      <dependency>
   <groupId>11</groupId>
   <artifactId>1</artifactId>
   <version>1.0.0</version>
 </dependency>
--->
+
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
