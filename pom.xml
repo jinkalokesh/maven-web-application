@@ -28,9 +28,18 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
-
+	<repositories>
+<repository>
+	<id>nexus</id>
+	<url>http://18.212.55.5:8081/repository/group/</url>
 	<dependencies>
-		
+    <dependency>
+  <groupId>11</groupId>
+  <artifactId>1</artifactId>
+  <version>1.0.0</version>
+    </dependency>
+
+
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
@@ -97,14 +106,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://54.255.174.111:8081/repository/flipkart-release/</url>
+	      <name>release</name>
+	      <url>http://18.212.55.5:8081/repository/release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://54.255.174.111:8081/repository/flipkart-snapshot/</url>
+	      <name>snapshot</name>
+	      <url>http://18.212.55.5:8081/repository/snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
