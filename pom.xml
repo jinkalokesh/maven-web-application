@@ -111,13 +111,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Releases</name>
-	      <url>http://18.212.55.5:8081/repository/release/</url>
+	      <url>http://54.211.69.82:8081/repository/release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Snapshot</name>
-	      <url>http://18.212.55.5:8081/repository/snapshot/</url>
+	      <url>http://54.211.69.82:8081/repository/snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
